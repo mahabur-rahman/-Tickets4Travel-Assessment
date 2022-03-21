@@ -1,0 +1,190 @@
+.loginCard {
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // main card
+    .main_card {
+        .card {
+            margin-top: 2rem;
+            width: 512px;
+            height: 728px;
+            position: absolute;
+            right: -30%;
+            top: 0;
+            border: none;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            // logo
+            .logo {
+                cursor: pointer;
+                margin-top: 5rem !important;
+                width: 119px;
+                height: 119px;
+                margin: 0 auto;
+            }
+            // title
+            h3.title {
+                color: #473558;
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 42px;
+            }
+        }
+        // main form input
+        .main_form {
+            form {
+                input {
+                    margin: 0 auto;
+                    width: 380px;
+                    height: 45px;
+                    left: calc(50% - 380px / 2 + 444px);
+                    top: calc(50% - 53px / 2 - 85.5px);
+                    border: 2px solid #666;
+                    border-radius: 10px;
+                }
+                input:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+                input::placeholder {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 23px;
+                }
+                // password title
+                .password_title {
+                    width: 380px;
+                    text-align: right;
+                    margin: 0 auto;
+                    a {
+                        text-decoration: none;
+                        text-align: end !important;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #ff0000;
+                        cursor: pointer;
+                    }
+                }
+                // login btn
+                .login_btn {
+                    color: #fff;
+                    font-weight: 700;
+                    font-size: 18px;
+                    line-height: 26px;
+                    width: 380px;
+                    height: 53px;
+                    background: #3e489a;
+                    border-radius: 10px;
+                    transition: 0.3s;
+                    -webkit-transition: 0.3s;
+                    -moz-transition: 0.3s;
+                    -ms-transition: 0.3s;
+                    -o-transition: 0.3s;
+                    // hover
+                    &:hover {
+                        background: #3e489a;
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+        // or text
+        .or {
+            position: relative;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 20px;
+            color: #333;
+            // before
+            &::before {
+                content: "";
+                position: absolute;
+                width: 140px;
+                height: 0px;
+                left: 12%;
+                top: 48%;
+                border: 1px solid #666666;
+            }
+            // after
+            &::after {
+                content: "";
+                position: absolute;
+                width: 140px;
+                height: 0px;
+                right: 12%;
+                top: 48%;
+                border: 1px solid #666666;
+            }
+        }
+        // social img
+        .social_img {
+            padding: 1.3rem 0;
+            .facebook_img,
+            .gmail_img {
+                width: 40px;
+                height: auto;
+                margin: 0 2rem;
+            }
+        }
+        // account title
+        .account_title {
+            color: #707070;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 23px;
+        }
+        // sign up btn
+        .sign_up {
+            font-weight: 700;
+            font-size: 1rem;
+            line-height: 23px;
+            text-align: center;
+            color: #00aeef;
+            text-decoration: none;
+        }
+    }
+}
+
+// responsive start
+@media (max-width: 1200px) {
+    .loginCard {
+        height: 83vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .loginCard {
+        height: 16vh;
+    }
+}
+
+@media (max-width: 623px) {
+    .loginCard .main_card .card {
+        position: inherit;
+        margin-top: 4rem;
+        text-align: center;
+    }
+    .loginCard .main_card .card h3.title {
+        font-size: 20px;
+    }
+    .loginCard .main_card .main_form form input,
+    .loginCard .main_card .main_form form .login_btn {
+        width: 300px;
+    }
+    .loginCard .main_card .main_form form .password_title {
+        margin: 0;
+    }
+    .loginCard .main_card .or::before {
+        width: 115px;
+        left: 21%;
+    }
+    .loginCard .main_card .or::after {
+        width: 115px;
+        right: 21%;
+    }
+}

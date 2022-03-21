@@ -1,0 +1,39 @@
+#loginForm {
+    background: url("../images/bg.png") no-repeat center center / cover;
+    width: 70%;
+    min-height: 105vh;
+    padding: 5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    // man image
+    .main_img {
+        img {
+            height: 600px;
+        }
+    }
+}
+
+// responsive start
+@media (max-width: 1200px) {
+    #loginForm {
+        min-height: 83vh;
+    }
+}
+
+@media (max-width: 623px) {
+    #loginForm {
+        min-height: 83vh;
+        width: 100%;
+        background: none;
+    }
+    #loginForm .main_img img {
+        display: none;
+    }
+    .loginCard .main_card .card {
+        height: auto;
+        border: none;
+        margin: 0 auto;
+    }
+}
